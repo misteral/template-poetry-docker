@@ -8,7 +8,7 @@
 
 	// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
 	"dockerFile": "../Dockerfile",
-
+	"build.target": "builder",
 	// Set *default* container specific settings.json values on container
 	// create.
 	"customizations": {
@@ -29,12 +29,12 @@
 			]
 		}
 	},
-	
+
 	// Add the IDs of extensions you want installed when the container is created.
 
-	"workspaceMount": "source=${localWorkspaceFolder}/,target=/code,type=bind,consistency=cached", 
-	
-	"workspaceFolder": "/code",
+	"workspaceMount": "source=${localWorkspaceFolder}/,target=/app,type=bind,consistency=cached",
+
+	"workspaceFolder": "/app",
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
